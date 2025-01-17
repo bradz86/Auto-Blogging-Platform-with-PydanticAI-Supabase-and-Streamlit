@@ -1,0 +1,6 @@
+"""
+    Example-specific dependencies
+    """
+    pydantic-ai[openai]
+    httpx
+    gradio>=5.9.0

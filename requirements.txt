@@ -1,0 +1,6 @@
+"""
+    Required dependencies following Streamlit documentation
+    """
+    streamlit>=1.32.0
+    pydantic-ai[openai]
+    supabase>=2.39.0

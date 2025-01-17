@@ -1,0 +1,21 @@
+"""
+    Docker Compose Configuration
+    """
+    version: '3.8'
+
+    services:
+      app:
+        build: .
+        ports:
+          - "8000:8000"
+          - "8501:8501"
+        environment:
+          - ENV=production
+          - DEBUG=False
+          - LOG_LEVEL=INFO
+          - SUPABASE_URL=${SUPABASE_URL}
+          - SUPABASE_KEY=${SUPABASE_KEY}
+          - OPENAI_API_KEY=${OPENAI_API_KEY}
+        volumes:
+          - .:/app
+        restart: unless-stopped
